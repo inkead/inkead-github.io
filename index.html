@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title> Personal Portfolio Website </title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/ecdd73cfc5.js" crossorigin="anonymous"></script>
+</head>
+<!-- About me-->
+<body>
+  <div id="header">
+    <div class="container">
+      <nav>
+        <img src="images/logo.png" class="logo">
+        <ul>
+          <li><a href="#header">Home</a></li>
+          <li><a href="#About">About</a></li>
+          <li><a href="#Portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-text">
+        <p>Network Engineer</p>
+        <h1>Hello, I am Md. Salam <span>Inkead</span> <br> From Bangladesh</h1>
+      </div>
+    </div>
+  </div>
+
+  <!--About Me Section-->
+  <div id="About">
+    <div class="container">
+      <div class="row">
+        <div class="about-col-1">
+          <img src="images/user.png">
+        </div>
+        <div class="about-col-2">
+          <h1 class="sub-title">About Me</h1>
+          <p>I'm MD Salam Inkead, a recent CSE graduate from IUB with a passion for networking. I've
+            taken various networking courses, combining my solid foundation in computer science with
+            practical insights into the field. I believe that the future of technology relies on robust
+            networks, and I'm eager to contribute. Known for my dedication to excellence, I'm excited
+            to explore new challenges and collaborate with fellow professionals in the ever-evolving
+            world of networking. Let's connect and embark on exciting ventures together.</p>
+
+          <div class="tab-titles">
+            <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+            <p class="tab-links" onclick="opentab('Experiance')">Experiance</p>
+            <p class="tab-links" onclick="opentab('Education')">Education</p>
+          </div>
+
+          <div class="tab-contents active-tab" id="Skills">
+            <ul>
+              <li><span>Troubleshooting and Diagnostics</span><br>Diagnosed the problem and efficiently resolved network
+                issues</li>
+              <li><span>Network Design</span><br>Design scalable and efficient network architectures.</li>
+              <li><span>MPLS</span><br> Redesigning connectivity for multiprotocol label switching, including the
+                configuration of necessary lines and routers.</li>
+            </ul>
+          </div>
+
+          <div class="tab-contents" id="Experiance">
+            <ul>
+              <li><span>2022-Current</span><br>Senior Engineer at ByteSprint Technologies</li>
+              <li><span> 2019-2022</span><br>Team Lead at CircuitCraft Innovations</li>
+              <li><span>2017-2019</span><br>Junior Engineer at LinkForge Solutions</li>
+            </ul>
+          </div>
+
+          <div class="tab-contents" id="Education">
+            <ul>
+              <li><span>2017</span><br>CISCO CCNA Module 1 and 3</li>
+              <li><span>2017</span><br>MS in Telecommunication Networks from Northeastern University, Boston</li>
+              <li><span>2015</span><br>BSc in Computer Scince and engineering from Independent University, Bangladesh
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Portfolio -->
+  <div id="Portfolio">
+    <div class="container">
+      <h1 class="sub-title">Portfolio</h1>
+      <div class="work-list">
+        <div class="work">
+          <img src="images/work-1.jpg" alt="">
+          <div class="layer">
+            <h3>Hybrid Cloud Integration (2017-2018)</h3>
+            <p>Orchestrated the integration of on-premises infrastructure with a hybrid cloud environment, leveraging
+              Azure.
+              Implemented seamless data migration strategies and ensured high availability for critical applications for
+              GlobalCorp.</p>
+          </div>
+        </div>
+
+        <div class="work">
+          <img src="images/work-2.png" alt="">
+          <div class="layer">
+            <h3>CloudConnect Migration (2019-2020)</h3>
+            <p>Led the successful migration of a traditional on-premises network to a cloud-based infrastructure using
+              AWS.
+              Implemented scalable and secure connectivity solutions, reducing latency and optimizing resource
+              utilization.</p>
+          </div>
+        </div>
+
+        <div class="work">
+          <img src="images/work-3.png" alt="">
+          <div class="layer">
+            <h3>Network Automation Project (2021-2022)</h3>
+            <p>Introduced automation scripts using Python and Ansible to streamline routine network configuration tasks,
+              reducing manual errors and improving operational efficiency. Achieved a 40% reduction in deployment time.
+            </p>
+          </div>
+        </div>
+
+
+
+      </div>
+      <a href="#" class="btn">See more</a>
+    </div>
+  </div>
+
+  <!-- Contact -->
+  <div id="contact">
+    <div class="container">
+      <div class="row">
+
+        <div class="contact-left">
+          <h1 class="sub-title">Contact Me</h1>
+          <p><i class="fa-solid fa-paper-plane"></i></i>contact@example.com</p>
+          <p><i class="fa-solid fa-phone"></i></i>(+880)123456789</p>
+          <div class="social-icons">
+            <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://twitter.com"><i class="fab fa-twitter-square"></i></a>
+            <a href="https://bd.linkedin.com/"><i class="fab fa-linkedin"></i></a>
+          </div>
+          <a href="images/my-cv.pdf" download class="btn btn2">Download CV</a>
+        </div>
+
+        <div class="contact-right">
+          <form>
+            <input type="text" name="Name" placeholder="Your Name" required>
+            <input type="email" name="Email" placeholder="Your Email" required>
+            <textarea name="Message" rows="6" placeholder="Your Massage"></textarea>
+            <button type="submit" class="btn btn2">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+  <!-- JS PART in About me Section-->
+  <script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname) {
+      for (tablink of tablinks) {
+        tablink.classList.remove("active-link");
+      }
+      for (tabcontent of tabcontents) {
+        tabcontent.classList.remove("active-tab");
+      }
+
+      event.currentTarget.classList.add("active-link");
+      document.getElementById(tabname).classList.add("active-tab");
+    }
+
+  </script>
+
+
+</body>
+
+</html>
